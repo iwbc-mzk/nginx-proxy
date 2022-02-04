@@ -11,7 +11,7 @@ services:
     volumes:
       - ./conf.d:/etc/nginx/conf.d
       - ./html:/var/www/html
-      - ./ssl/:/ssl/
+      - /ssl/:/ssl/
       - ./log:/var/log/nginx/proxy
 networks:
   proxy-network:
