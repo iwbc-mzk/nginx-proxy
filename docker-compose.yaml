@@ -1,0 +1,18 @@
+version: '3.5'
+
+services:
+  proxy-nginx:
+    image: nginx:alpine
+    ports:
+      - 80:80
+      - 443:443
+    networks:
+      - proxy-network
+    volumes:
+      - ./conf.d:/etc/nginx/conf.d
+      - ./html:/var/www/html
+      - ./ssl/:/ssl/
+      - ./log:/var/log/nginx/proxy
+networks:
+  proxy-network:
+    name: proxy-network
