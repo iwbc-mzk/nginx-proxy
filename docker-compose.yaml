@@ -13,7 +13,7 @@ services:
       - /ssl:/ssl/
       # for local develop
       # - C:/ssl/:/ssl/ 
-      - ./log:/var/log/nginx/proxy
+      - /log:/var/log/nginx/proxy
 networks:
   proxy-network:
     name: proxy-network
